@@ -5,16 +5,18 @@
     <ul>
       <li v-for="cat in categories" :key="cat">{{cat}}</li>
     </ul>
+    <p>{{getEventById(2)}}</p>
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 export default {
   computed: {
     catLength() {
       return this.$store.getters.catLength;
     },
+    ...mapGetters(["getEventById"]),
     ...mapState(["user", "categories"])
   }
 };

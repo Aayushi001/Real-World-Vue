@@ -33,6 +33,10 @@ export default new Vuex.Store({
     },
     activeTodosCount: (state, getters) => {
       return state.todos.length - getters.doneTodos.length;
+    },
+    // dynamic getter
+    getEventById: state => id => {
+      return state.todos.find(event => event.id === id);
     }
   }
 });
