@@ -44,6 +44,42 @@
       "date": "2019-02-02T23:27:00.000Z",
       "time": "1:00",
       "attendees": []
+    },
+    {
+      "id": 4069199,
+      "user": {
+        "id": "abc123",
+        "name": "Aayushi Singh"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Aayushi Singh"
+      },
+      "title": "qwertyuio",
+      "description": "poiuytre",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 8863513,
+      "user": {
+        "id": "abc123",
+        "name": "Aayushi Singh"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Aayushi Singh"
+      },
+      "title": "Make Earth Greener",
+      "description": "Grow more trees",
+      "location": "Bangalore",
+      "date": "2019-05-31T12:04:00.000Z",
+      "time": "18:00",
+      "attendees": []
     }
   ]
 }
