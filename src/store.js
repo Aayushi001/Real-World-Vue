@@ -27,6 +27,9 @@ export default new Vuex.Store({
   mutations: {
     ADD_EVENT(state, event) {
       state.events.push(event);
+    },
+    SET_EVENTS(state, events) {
+      state.events = events;
     }
   },
   actions: {
@@ -34,12 +37,22 @@ export default new Vuex.Store({
       return EventService.postEvent(event).then(() => {
         commit("ADD_EVENT", event);
       });
+    },
+    fetchEvents({ commit }) {
+      EventService.getEvents()
+        .then(result => {
+          commit("SET_EVENTS", result.data);
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
   getters: {
     catLength: state => {
       return state.categories.length;
     },
+
     doneTodos: state => {
       return state.todos.filter(todo => todo.done);
     },
